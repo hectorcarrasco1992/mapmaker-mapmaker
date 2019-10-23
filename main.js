@@ -77,15 +77,18 @@ return newArr
 }
 
 function add1ToLeft(arr) {
-  let left = []
-  let num = '1'
-  for (let i = 0; i < arr.length; i++){
-    if(arr[i] > 0|| arr[i] < 0){
-      left.push(num + arr[i])
+  let newArr = []
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] < 0) {
+    newArr.push(Number(`1${arr[i] * -1}` * -1))
+  } else if (arr[i] >= 0) {
+    newArr.push(Number(`1${arr[i]}`))
     }
   }
-return left
-}
+  return newArr;
+ }
+
+
 
 
 module.exports = {
