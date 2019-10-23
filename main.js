@@ -39,13 +39,11 @@ function yelledGreetings(arr) {
 function changeToInitials(arr) {
   let newArr = []
   for (i = 0;i < arr.length;i++) {
-    for(j = 0;j < arr[i].length;j++){
-    if(j === 0){
-      newArr.push(arr[i][j])
-    } else if (arr[i][j] === ' ') {
-      newArr.push(arr[i][j+1])
-    }
-  }
+    const name = arr[i];
+    const inital1 = name[0]
+    const spaceIndex = name.indexOf(' ')
+    const initial2 =name[spaceIndex + 1]
+    newArr.push(inital1 + initial2)  
   }
   return newArr
 }
